@@ -6,11 +6,11 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Welcome to JS MONGO API');
 });
 
 app.use(express.json());
-app.use('/users', userRouter);
+app.use('/api/users', userRouter);
 
 connectMongoDB()
   .then(() => {
