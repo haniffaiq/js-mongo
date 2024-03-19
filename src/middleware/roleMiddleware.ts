@@ -9,7 +9,7 @@ const checkRoleAdmin = async (req: Request, res: Response, next: NextFunction): 
   }
 
   try {
-    const decoded = verify(token, 'Hanfix13@');
+    const decoded = verify(token, 'rahasiaBanget13#');
     const role = (decoded as { role: string }).role;
     if (role !== 'admin') {
       throw new Error('Unauthorized');

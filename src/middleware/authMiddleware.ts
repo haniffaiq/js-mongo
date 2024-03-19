@@ -9,7 +9,7 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction): void =
   }
 
   try {
-    const decoded = verify(token, 'Hanfix13@');
+    const decoded = verify(token, 'rahasiaBanget13#');
     req.body.userId = (decoded as { _id: string })._id;
     next(); 
   } catch (error:any) {
