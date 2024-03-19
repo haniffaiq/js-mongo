@@ -1,10 +1,6 @@
 import { Schema } from 'mongoose';
 
-function generateUUID(): string {
-    const timestamp = new Date().getTime().toString(16);
-    const randomPart = Math.floor(Math.random() * 1000000000).toString(16);
-    return `${timestamp}-${randomPart}`;
-}
+
 const newsSchema = new Schema({
     bahasa: [{
         id: { type: String, required: true},

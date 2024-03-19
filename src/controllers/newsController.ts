@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import News from '../models/newsModels';
-
+// 
 
 function generateUUID(): string {
     const timestamp = new Date().getTime().toString(16);
@@ -32,7 +32,7 @@ export const createNews = async (req: Request, res: Response) => {
             throw new Error('Invalid language specified');
         }
 
-        res.status(201).json(newsCollection);
+        res.status(201).json({message:"Created News Successfully"});
     } catch (error : any) {
         res.status(500).json({ error: error.message });
     }
